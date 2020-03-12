@@ -246,7 +246,6 @@ class CustomStyle: DayStyle {
         super.init()
         mapStyleURL = Bundle.main.url(forResource: "third_party_vector_style", withExtension: "json")!
         // mapStyleURL = URL(string: "mapbox://styles/mapbox/satellite-streets-v9")!
-        styleType = .nightStyle
     }
 
     override func apply() {
