@@ -231,7 +231,7 @@ public class FlutterMapboxNavigationView : NSObject, FlutterPlatformView
             
             let options = NavigationOptions(styles: [CustomStyle()])
 
-            let nav = NavigationViewController(for: route)
+            let nav = NavigationViewController(for: route, options: options)
             navView = nav.view
             nav.navigationService.start()
             
