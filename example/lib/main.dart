@@ -14,9 +14,9 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   String _platformVersion = 'Unknown';
   final _origin =
-      Location(name: "City Hall", latitude: 42.886448, longitude: -78.878372);
+      Location(name: "City Hall", latitude: 10.75917, longitude: 106.67539);
   final _destination = Location(
-      name: "Downtown Buffalo", latitude: 42.8866177, longitude: -78.8814924);
+      name: "Downtown Buffalo", latitude: 10.74617, longitude: 106.68290);
 
   MapboxNavigation _directions;
   bool _arrived = false;
@@ -42,11 +42,10 @@ class _MyAppState extends State<MyApp> {
       setState(() {
         _arrived = arrived;
       });
-      if (arrived)
-        {
-          await Future.delayed(Duration(seconds: 3));
-          await _directions.finishNavigation();
-        }
+      if (arrived) {
+        await Future.delayed(Duration(seconds: 3));
+        await _directions.finishNavigation();
+      }
     });
 
     String platformVersion;
@@ -85,7 +84,9 @@ class _MyAppState extends State<MyApp> {
                     origin: _origin,
                     destination: _destination,
                     mode: NavigationMode.drivingWithTraffic,
-                    simulateRoute: true, language: "German", units: VoiceUnits.metric);
+                    simulateRoute: true,
+                    language: "German",
+                    units: VoiceUnits.metric);
               },
             ),
             SizedBox(
@@ -115,7 +116,6 @@ class _MyAppState extends State<MyApp> {
                 ],
               ),
             ),
-
           ]),
         ),
       ),

@@ -104,7 +104,9 @@ public class SwiftFlutterMapboxNavigationPlugin: NSObject, FlutterPlugin, Flutte
         
         if(self._navigationViewController == nil)
         {
-            self._navigationViewController = NavigationViewController(for: route)
+            let options = NavigationOptions(styles: [CustomStyle()])
+
+            self._navigationViewController = NavigationViewController(for: route, options: options)
             self._navigationViewController!.delegate = self
             self._navigationViewController!.mapView?.localizeLabels()
         }
@@ -245,11 +247,9 @@ class CustomStyle: DayStyle {
     required init() {
         super.init()
         mapStyleURL = Bundle.main.url(forResource: "third_party_vector_style", withExtension: "json")!
-        // mapStyleURL = URL(string: "mapbox://styles/mapbox/satellite-streets-v9")!
     }
 
     override func apply() {
         super.apply()
-        BottomBannerView.appearance().backgroundColor = .orange
     }
 }

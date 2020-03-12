@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>MGLMapboxAccessToken</key>
-	<string>ADD_MAPBOX_ACCESS_TOKEN_HERE</string>
+	<string>pk.eyJ1IjoicHRhbmh2bSIsImEiOiJjazdiOGwyZDkxY2MzM21wNnNteTEwY3M1In0.8GAKGO6ePltFUd3HoMnKLA</string>
 	<key>MGLMapboxMetricsEnabledSettingShownInApp</key>
 	<string>YES</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
